@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando H. Barrios | Perfil Profesional</title>
+  <meta name="description" content="Fernando H. Barrios - Técnico en redes y soporte con formación en desarrollo web front-end.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="perfil.jpg" alt="Fernando H. Barrios" class="perfil" />
+    <h1>Fernando H. Barrios</h1>
+    <p>Técnico en redes | Desarrollador Front-End en formación</p>
+  </header>
+  <nav class="navbar">
+    <div class="logo">Menú</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobremi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  
+  
+  <main>
+    <section id="sobremi">
+      <h2>Sobre mí</h2>
+      <p>
+        Tengo más de 5 años de experiencia en soporte técnico y redes, incluyendo videovigilancia, FTTH y monitoreo. Actualmente estoy aprendiendo desarrollo web con HTML, CSS, JavaScript y React para integrar soluciones IT completas.
+      </p>
+      <img src="trabajocampo.jpg" alt="trabajo de campo VVyC" class="trabajocampo"/>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="cards">
+        <div class="card">✔️ Redes y soporte técnico</div>
+        <div class="card">💻 HTML, CSS, JavaScript</div>
+        <div class="card">⚛️ React (en formación)</div>
+        <div class="card">📹 CCTV y videovigilancia</div>
+      </div>
+    </section>
+    
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>📧 Email: <a href="mailto:feernandobarrios@gmail.com">feernandobarrios@gmail.com</a></p>
+      <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/fernando-barrios-40a016142/" target="_blank">Visitar perfil</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Fernando H. Barrios</p>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+  
+</body>
+</html>
