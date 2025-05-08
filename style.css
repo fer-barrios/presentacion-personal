@@ -1,205 +1,241 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+/* ============================= */
+/* 🔄 RESET BÁSICO Y CONFIGURACIÓN GLOBAL */
+/* ============================= */
+* {
     margin: 0;
-    padding: 0;/* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-    
-    /* Header con imagen */
-    header {
-      background-color: #0a66c2;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    
-    .perfil {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 15px;
-      object-fit: cover;
-    }
-    
-    /* Secciones principales */
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    
-    section {
-      margin-bottom: 30px;
-    }
-    
-    h2 {
-      color: #0a66c2;
-      margin-bottom: 10px;
-    }
-    
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    
-    ul li {
-      margin-bottom: 8px;
-      font-size: 1.1em;
-    }
-    
-    /* Enlaces */
-    a {
-      color: #0a66c2;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #e9ecef;
-      color: #555;
-      margin-top: 40px;
-    }
-    /* Diseño responsivo para pantallas pequeñas */
-@media (max-width: 600px) {
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ============================= */
+  /* 🔷 ENCABEZADO (HEADER) */
+  /* ============================= */
   header {
-    padding: 30px 10px;
+    background-color: #0a66c2;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
   }
-
+  
   .perfil {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+    object-fit: cover;
   }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  main {
-    padding: 0 15px;
-  }
-
-  ul li {
-    font-size: 1em;
-  }
-
-  section {
-    margin-bottom: 25px;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
-}
-.navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #0a66c2;
-  font-weight: bold;
-}
-
-.nav-links li a:hover {
-  text-decoration: underline;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #0a66c2;
-}
-
-.logo {
-  display: none;
-  font-weight: bold;
-  color: #0a66c2;
-  font-size: 18px;
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
+  
+  header h1 {
+    font-size: 2rem;
     margin-top: 10px;
   }
-
-  .nav-links.show {
-    display: flex;
+  
+  header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
   }
-}
-.trabajocampo{
+  
+  /* ============================= */
+  /* 🔹 MENÚ DE NAVEGACIÓN (NAVBAR) */
+  /* ============================= */
+  .navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #0a66c2;
+    font-weight: bold;
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo {
+    display: none;
+    font-weight: bold;
+    color: #0a66c2;
+    font-size: 18px;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #0a66c2;
+  }
+  
+  /* ============================= */
+  /* 🧱 CONTENIDO PRINCIPAL (MAIN) */
+  /* ============================= */
+  main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #0a66c2;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  /* ============================= */
+  /* 🧩 HABILIDADES - TARJETAS */
+  /* ============================= */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* ============================= */
+  /* 🖼️ IMAGEN DE TRABAJO */
+  /* ============================= */
+  .trabajocampo {
     width: 100%;
     height: auto;
     max-width: 600px;
-}
-
-}
+    margin-top: 15px;
+    border-radius: 6px;
+  }
+  
+  /* ============================= */
+  /* 🔗 ENLACES */
+  /* ============================= */
+  a {
+    color: #0a66c2;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ============================= */
+  /* 📎 LISTAS */
+  /* ============================= */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+  }
+  
+  /* ============================= */
+  /* 📥 PIE DE PÁGINA (FOOTER) */
+  /* ============================= */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e9ecef;
+    color: #555;
+    margin-top: 40px;
+  }
+  
+  /* ============================= */
+  /* 📱 RESPONSIVE DESIGN */
+  /* ============================= */
+  @media (max-width: 600px) {
+    header {
+      padding: 30px 10px;
+    }
+  
+    .perfil {
+      width: 90px;
+      height: 90px;
+    }
+  
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    main {
+      padding: 0 15px;
+    }
+  
+    ul li {
+      font-size: 1em;
+    }
+  
+    section {
+      margin-bottom: 25px;
+    }
+  
+    footer {
+      font-size: 0.9rem;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  }
+  
